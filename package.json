@@ -1,0 +1,24 @@
+{
+  "name": "projectJavaScript",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "bcryptjs": "2.3.0",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "sails-mysql": "^0.11.5"
+  },
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/projectJavaScript.git"
+  },
+  "author": "anonymous node/sails user",
+  "license": ""
+}
