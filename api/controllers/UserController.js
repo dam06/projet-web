@@ -7,10 +7,11 @@ module.exports = {
       var data={};
 
       data.mesdata  = {
-      title: "le titre ",
-      content : "le contenu",
+      title: " information du compte utilisateur",
+      content : "mettre a jour les infos utilisateur",
                    };
                data.user=req.user;
+
 
              console.log(req.user);
         return res.view('moncompte',data);
