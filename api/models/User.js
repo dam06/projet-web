@@ -27,6 +27,16 @@ module.exports = {
                                     minLength: 3,
                                     required: false
                                 },
+
+
+
+
+   // Add a reference to Pets
+    adresses: {
+      collection: 'adresse',
+      via: 'owner'
+    },
+
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;

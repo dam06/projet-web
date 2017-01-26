@@ -15,5 +15,16 @@ module.exports = {
 
              console.log(req.user);
         return res.view('moncompte',data);
+         var where={id:"req.user.id"};
+              User.findOne(where)
+              .populate('adresses')
+              .exec (function (error,user){
+              data.user=user
+              console.log(user);
+              return res.view('test',data);
+              });
+              user.adresses[0].ville;
       },
+
+
 };
