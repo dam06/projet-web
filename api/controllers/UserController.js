@@ -1,6 +1,4 @@
-module.exports = {
-
-};
+var path = require('path');
 module.exports = {
     moncompte: function (req, res)
       {
@@ -14,17 +12,32 @@ module.exports = {
 
 
              console.log(req.user);
-        return res.view('moncompte',data);
-         var where={id:"req.user.id"};
+
+         var where={id:req.user.id};
               User.findOne(where)
               .populate('adresses')
               .exec (function (error,user){
-              data.user=user
+              data.user=user;
               console.log(user);
-              return res.view('test',data);
+              return res.view('moncompte',data);
               });
-              user.adresses[0].ville;
       },
+          upload: function  (req, res) {
+            req.file('avatar').upload({
+              dirname:path.resolve(sails.config.appPath, 'assets/images/avatar')
+              },function (err, files) {
+              if (err) return res.serverError(err);
+
+              return res.json({
+                message: files.length + ' file(s) uploaded successfully!',
+
+                files: files
+
+              });
+               console.log(path.basename(file[0].fd));
+            });
+          }
+        };
 
 
-};
+

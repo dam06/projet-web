@@ -53,7 +53,13 @@ module.exports.routes = {
       controller: 'UserController',
       action: 'moncompte'
 
-    }
+    },
+
+       'post /upload': {
+          controller: 'UserController',
+          action: 'upload'
+
+        }
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

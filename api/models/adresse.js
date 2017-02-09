@@ -24,7 +24,7 @@ module.exports = {
                                       },
                        // Add a reference to User
                               owner: {
-                               model: 'user'
+                               model: 'User'
                                  },
 
     }

@@ -12,19 +12,24 @@
 <h2><%= mesdata.content%></h2>
 <h1>newinfo</h1>
 <form method="POST" action="/user/<%= user.id%>">
-  <input type="text" name="nom" value="user.nom" placeholder="Entrez un nom">
-  <input type="text" name="prenom" value="user.prenom" placeholder="Entrez un prenom">
-  <input type="text" name="pseudo" value= "user.pseudo1" placeholder="Entrez un pseudo">
+  <input type="text" name="nom" value="<%= user.nom%>" placeholder="Entrez un nom">
+  <input type="text" name="prenom" value="<%= user.prenom%>" placeholder="Entrez un prenom">
+  <input type="text" name="pseudo" value= "<%= user.pseudo1%>" placeholder="Entrez un pseudo">
   <input type="submit" value="submit">
+  </form>
 
   <form method="POST" action="/adresse/<%= user.adresses[0].id%>">
-    <input type="text" name="rue1" value="user.adresses[0].rue1"placeholder="Entrez une rue">
-    <input type="text" name="rue2" value="user.adresses[0].rue2"placeholder="Entrez une rue">
-    <input type="text" name="ville" value="user.adresses[0].ville"placeholder="Entrez une ville">
-    <input type="text" name="codeP" value="user.adresses[0].codeP"placeholder="Entrez un code postal">
+    <input type="text" name="rue1" value="<%=user.adresses[0].rue1%>" placeholder="Entrez une rue">
+    <input type="text" name="rue2" value="<%= user.adresses[0].rue2%>" placeholder="Entrez une rue">
+    <input type="text" name="ville" value="<%= user.adresses[0].ville%>" placeholder="Entrez une ville">
+    <input type="text" name="codeP" value="<%= user.adresses[0].codeP%>" placeholder="Entrez un code postal">
  <input type="submit" value="submit">
+ </form>
 
 
+  <form method="POST" action="/upload"  enctype="multipart/form-data" method="post">
+  <input type="file" name="avatar">
+  <input type="submit" value="upload">
 </form>
 
 

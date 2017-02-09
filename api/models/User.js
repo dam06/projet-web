@@ -28,6 +28,13 @@ module.exports = {
                                     required: false
                                 },
 
+                                 urlAvatar: {
+                                  type: 'string',
+                                 minLength: 3,
+                                  required: false
+                                  },
+
+
 
 
 
