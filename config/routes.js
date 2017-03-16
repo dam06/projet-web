@@ -59,7 +59,11 @@ module.exports.routes = {
           controller: 'UserController',
           action: 'upload'
 
-        }
+        },
+           'get /participants': {
+              view: 'participants'
+
+            },
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

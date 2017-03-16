@@ -24,20 +24,24 @@ module.exports = {
       },
           upload: function  (req, res) {
             req.file('avatar').upload({
-              dirname:path.resolve(sails.config.appPath, 'assets/images/avatar')
+              dirname:path.resolve(sails.config.appPath, 'assets/images/upload')
               },function (err, files) {
               if (err) return res.serverError(err);
-
+         console.log(path.basename(files[0].fd));
+          var where={id:req.user.id,urlAvatar:path.basename(files[0].fd)};
+                       User.update(where).exec (function (error,user){
+                       data.user=user;
+                       console.log(user);
               return res.json({
                 message: files.length + ' file(s) uploaded successfully!',
 
                 files: files
 
               });
-               console.log(path.basename(file[0].fd));
+
             });
-          }
-        };
+        });
+        }
 
-
+}
 
