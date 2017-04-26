@@ -1,0 +1,23 @@
+body {
+background-color :silver;
+}
+h1 {
+ color: blue;
+ background-color: black;
+}
+#titre {
+ color: red;
+ background-color: blue;
+}
+.exemple_un {
+  background-color: orange;
+  color: green;
+}
+.selected {
+background: red;
+}
+.selected2 {
+background: silver;
+}
+
+
