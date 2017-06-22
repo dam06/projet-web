@@ -1,7 +1,11 @@
 var path = require('path');
 module.exports = {
-    moncompte: function (req, res)
-      {
+
+     test: function (req,res) {
+        res.json({val1:'val1',val2 :'val2'});
+     },
+
+    moncompte: function (req, res) {
       var data={};
 
       data.mesdata  = {

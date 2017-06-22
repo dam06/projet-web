@@ -54,6 +54,13 @@ module.exports.routes = {
       action: 'moncompte'
 
     },
+        'post /moncompte/test': {
+          controller: 'UserController',
+          action: 'test'
+
+        },
+
+
 
        'post /upload': {
           controller: 'UserController',
